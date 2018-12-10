@@ -1,0 +1,111 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+* {
+  font-family: "Avenir Light" !important;
+}
+.list {
+  list-style: none;
+}
+.n:hover {
+  text-decoration: none;
+  color: initial !important;
+}
+.n {
+  color: black;
+  font-size: 20px;
+}
+@font-face {
+    font-family: "Avenir Light";
+    src: url(/fonts/avenir-light.otf);
+}
+@font-face {
+    font-family: "Meedori Bold";
+    src: url(/fonts/meedori-bold.ttf);
+}
+.title {
+  font-family: "Meedori Bold" !important;
+  font-color: black !important;
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+::-webkit-scrollbar-button {
+  width: 15px;
+  height: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: lightgray;
+}
+::-webkit-scrollbar-thumb:active {
+  background: lightgray;
+}
+::-webkit-scrollbar-track {
+  background: darkgray;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+  background: darkgray;
+}
+::-webkit-scrollbar-track:active {
+  background: darkgray;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+/* Dark Mode Toggle Code */
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #000000; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "DARK";
+    padding-left: 10px;
+    background-color: #000000; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "LIGHT";
+    padding-right: 10px;
+    background-color: #FFFFFF; color: #000000;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #000000; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
