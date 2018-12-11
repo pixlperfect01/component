@@ -27,16 +27,27 @@ function clearSearch() {
       li[i].style.display = "";
     }
 }
+if(var number=getUrlVars()["dark"]){
+  document.getElementById('navbarcol').style.backgoundColor = rgb(7,7,7);
+  document.getElementById('navbarcol').style.color = rgb(102,102,102);
+  ducument.body.style.backgroundColor=rgb(0,0,0);
+  document.body.style.color=rgb(255,255,255);
+  document.getElementsByName('com')[0].style.backgroundColor=rgb(255,255,255);
+  document.getElementsByName('com')[0].style.color=rgb(255,255,255);
+  document.getElementsByName('com')[1].style.backgroundColor=rgb(255,255,255);
+  document.getElementsByName('com')[1].style.color=rgb(255,255,255);
+  document.getElementsByName('com')[2].style.backgroundColor=rgb(255,255,255);
+  document.getElementsByName('com')[2].style.color=rgb(255,255,255);
+  document.getElementsByName('com1')[0].style.backgroundColor=rgb(30,135,240);
+  document.getElementsByName('com1')[0].style.color=rgb(255,255,255);
+}
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
-    document.body.style.backgroundColor = sessionStorage.getItem("bg");
-document.body.style.color = sessionStorage.getItem("cc");
-function theme() {
-    "rgb(255, 255, 255)" === sessionStorage.getItem("bg") ? (sessionStorage.setItem("bg", "rgb(6, 23, 37)"),
-    sessionStorage.setItem("cc", "#777")) : null == sessionStorage.getItem("bg") ? (sessionStorage.setItem("bg", "rgb(6, 23, 37)"),
-    sessionStorage.setItem("cc", "#777")) : "rgb(6, 23, 37)" === sessionStorage.getItem("bg") && (sessionStorage.setItem("bg", "rgb(255, 255, 255)"),
-    sessionStorage.setItem("cc", "#333"));
-    document.body.style.backgroundColor = sessionStorage.getItem("bg");
-    document.body.style.color = sessionStorage.getItem("cc")
+function getUrlVars() {
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+  return vars;
 }
