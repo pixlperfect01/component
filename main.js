@@ -1,5 +1,6 @@
 function searchFunction() {
-    var input, filter, ul, li, a, i, ii, tfilter, temp;
+    var input, filter, ul, li, a, i, ii, tfilter, tfilter2, temp, temp2;
+    temp2=0;
     input = document.getElementById('searching');
     filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
@@ -9,13 +10,20 @@ function searchFunction() {
     }
     // Loop through all list items, and hide those who don't match the search query
     tfilter = filter;
+    tfilter2 = filter;
+    temp2 = tfilter2.indexOf(' ',1);
+    temp = tfilter2.indexOf(' ',1);
     for(ii = 0;ii<20;ii++){
-      temp = tfilter.indexOf(' ');
+      temp = temp2
+      temp2 = tfilter2.indexOf(' ',temp+1);
+    
       if(temp!=-1){
         tfilter=tfilter.substring(temp);
+        tfilter2=tfilter.substring(temp+1,temp2);
       }else{
         break;
       }
+      
       for (i = 0; i < li.length; i++) {
         if (li[i].getAttribute('data-search-tags').toUpperCase().indexOf(tfilter) > -1) {
           li[i].style.display = "";
