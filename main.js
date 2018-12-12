@@ -1,6 +1,6 @@
 searchFunction();
 function searchFunction() {
-var input,filter,temp,tfilter,temp2,tfilter2,ii,i,li,ul;
+var input,filter,temp,tfilter,tmp2,tfilter2,ii,i,li,ul;
     ul = document.getElementById("myUL");
     li = ul.getElementsByTagName('li');
 input = document.getElementById('searching');
@@ -14,14 +14,14 @@ console.log(filter);
 console.log('');
   tfilter = filter;
   temp = tfilter.indexOf(' ');
-  temp2 = tfilter.indexOf(' ',temp+1);
+  tmp2 = tfilter.indexOf(' ',temp+1);
   for(ii = 0;ii<20&&temp!=-1;ii++){
     
       if(temp!=-1){
-        tfilter2=filter.substring(temp,temp2);
+        tfilter2=filter.substring(temp,tmp2);
         tfilter=filter.substring(temp);
       }
-if(temp2==-1)
+if(tmp2==-1)
 break;
 for (i = 0; i < li.length; i++) {
         if (!(li[i].getAttribute('data-search-tags').toUpperCase().indexOf(tfilter2) > -1)) {
@@ -29,7 +29,7 @@ for (i = 0; i < li.length; i++) {
         }
       }
 temp = filter.indexOf(' ',temp+1);
-temp2 = filter.indexOf(' ',temp+1);
+tmp2 = filter.indexOf(' ',temp+1);
     }
 function clearSearch() {
     var input, filter, ul, li, a, i;
