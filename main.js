@@ -1,36 +1,36 @@
+searchFunction();
 function searchFunction() {
-    var input, filter, ul, li, a, i, ii, tfilter, tfilter2, temp, temp2;
-    temp2=0;
-    input = document.getElementById('searching');
-    filter = input.value.toUpperCase();
+var input,filter,temp,tfilter,temp2,tfilter2,ii,i,li,ul;
     ul = document.getElementById("myUL");
     li = ul.getElementsByTagName('li');
-    for (i = 0; i < li.length; i++) {
-      li[i].style.display = "none";
-    }
-    // Loop through all list items, and hide those who don't match the search query
-    tfilter = filter;
-    tfilter2 = filter;
-    temp2 = tfilter2.indexOf(' ',1);
-    temp = tfilter2.indexOf(' ',1);
-    for(ii = 0;ii<20;ii++){
-      temp = temp2
-      temp2 = tfilter2.indexOf(' ',temp+1);
+input = document.getElementById('searching');
+filter = input.value.toUpperCase();
+for (i = 0; i < li.length; i++) {
+      li[i].style.display = "";
+}
+  filter=" "+filter;
+  filter+=" ";
+console.log(filter);
+console.log('');
+  tfilter = filter;
+  temp = tfilter.indexOf(' ');
+  temp2 = tfilter.indexOf(' ',temp+1);
+  for(ii = 0;ii<20&&temp!=-1;ii++){
     
       if(temp!=-1){
-        tfilter=tfilter.substring(temp);
-        tfilter2=tfilter.substring(temp+1,temp2);
-      }else{
-        break;
+        tfilter2=filter.substring(temp,temp2);
+        tfilter=filter.substring(temp);
       }
-      
-      for (i = 0; i < li.length; i++) {
-        if (li[i].getAttribute('data-search-tags').toUpperCase().indexOf(tfilter) > -1) {
-          li[i].style.display = "";
+if(temp2==-1)
+break;
+for (i = 0; i < li.length; i++) {
+        if (!(li[i].getAttribute('data-search-tags').toUpperCase().indexOf(tfilter2) > -1)) {
+          li[i].style.display = "none";
         }
       }
+temp = filter.indexOf(' ',temp+1);
+temp2 = filter.indexOf(' ',temp+1);
     }
-  }
 function clearSearch() {
     var input, filter, ul, li, a, i;
     input = document.getElementById('searching');
