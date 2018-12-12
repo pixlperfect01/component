@@ -30,7 +30,7 @@ for (i = 0; i < li.length; i++) {
       }
 temp = filter.indexOf(' ',temp+1);
 tmp2 = filter.indexOf(' ',temp+1);
-    }
+    }}
 function clearSearch() {
     var input, filter, ul, li, a, i;
     input = document.getElementById('searching');
