@@ -67,7 +67,7 @@ if(!(comps[i].hasAttribute('data-img')){
 comps[i].setAttribute('data-img','pictures/image.jpg');
 }
 if(!(comps[i].hasAttribute('data-link')){
-comps[i].setAttribute('data-link','pictures/image.jpg');
+comps[i].setAttribute('data-link','endless.horse');
 }
 if (!(comps[i].hasAttribute('data-tags')){
 comps[i].setAttribute('data-tags',' '+comps[i].getAttribute('data-lang')+' component');
