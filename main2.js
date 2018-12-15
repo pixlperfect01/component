@@ -45,4 +45,4 @@ wrapper.appendChild(info);
 Finally
   }
 }
-window.customElements.define('popup-info',new popup-info());
+window.customElements.define('popup-info',new PopUpInfo());
