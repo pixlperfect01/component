@@ -54,22 +54,22 @@ var comps = ul.getElementsByTagName('component');
 var tags,lang,title,desc,img,final;
 for(var i = 0;i<comps.length;i++){
 tags = "";
-if(!(comps[i].hasAttribute('data-lang')){
+if(!(comps[i].hasAttribute('data-lang'))){
 comps[i].setAttribute('data-lang','html');
 }
-if(!(comps[i].hasAttribute('data-title')){
+if(!(comps[i].hasAttribute('data-title'))){
 comps[i].setAttribute('data-title','FIX THIS');
 }
-if(!(comps[i].hasAttribute('data-desc')){
+if(!(comps[i].hasAttribute('data-desc'))){
 comps[i].setAttribute('data-desc','FIX  ME');
 }
-if(!(comps[i].hasAttribute('data-img')){
+if(!(comps[i].hasAttribute('data-img'))){
 comps[i].setAttribute('data-img','pictures/image.jpg');
 }
-if(!(comps[i].hasAttribute('data-link')){
+if(!(comps[i].hasAttribute('data-link'))){
 comps[i].setAttribute('data-link','endless.horse');
 }
-if (!(comps[i].hasAttribute('data-tags')){
+if (!(comps[i].hasAttribute('data-tags'))){
 comps[i].setAttribute('data-tags',' '+comps[i].getAttribute('data-lang')+' component');
 }
 if(comps[i].getAttribute('data-lang')=='html'){
