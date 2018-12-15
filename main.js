@@ -2,7 +2,7 @@ searchFunction();
 function searchFunction() {
 var input,filter,temp,tfilter,tmp2,tfilter2,ii,i,li,ul;
     ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName('li');
+    li = ul.getElementsByTagName('component');
 input = document.getElementById('searching');
 filter = input.value.toUpperCase();
 for (i = 0; i < li.length; i++) {
@@ -67,17 +67,11 @@ if(!(comps[i].hasAttribute('data-img')){
 comps[i].setAttribute('data-img','pictures/image.jpg');
 }
 if(!(comps[i].hasAttribute('data-link')){
-//comps[i].setAttribute('data-link',
+comps[i].setAttribute('data-link','pictures/image.jpg');
+}
 if (!(comps[i].hasAttribute('data-tags')){
 comps[i].setAttribute('data-tags',' '+comps[i].getAttribute('data-lang')+' component');
 }
 if(comps[i].getAttribute('data-lang')=='html'){
-comps[i].innerHTML="<li data-tags=\""+comps[i].getAttribute('data-tags')+"\" class=\"t\"><div name=\"com\"><div class=\"uk-card uk-card-default uk-card-hover\"><div class=\"uk-card-body\"><div class=\"uk-card-badge uk-label\">HTML</div><a href="https://bing.com" class="n">
-                <div class="uk-card-media-top">
-                <img src="pictures/video.jpg" alt="video">
-            </div>
-                <h3 class="uk-card-title">Video Component</h3>
-                <p>Generate code for a video.</p>
-    </a>
-        </div>
-        </li>
+comps[i].innerHTML="<div name=\"com\"><div class=\"uk-card uk-card-default uk-card-hover\"><div class=\"uk-card-body\"><div class=\"uk-card-badge uk-label\">HTML</div><a href=\""+comps[i].getAttribute('data-link')+"\" class=\"n\"><div class=\"uk-card-media-top\"><img src=\""+comps[i].getAttribute('data-img')"\" alt=\"video\"></div><h3 class=\"uk-card-title\">"+comps[i].getAttribute('data-title')+"</h3><p>"+comps[i].getAttribute('data-desc')+"</p></a></div>";
+}
