@@ -79,3 +79,4 @@ comps[i].innerHTML+=comps[i].getAttribute('data-img')+"\" alt=\"video\"></div><h
 comps[i].innerHTML+=comps[i].getAttribute('data-title')+"</h3><p>"+comps[i].getAttribute('data-desc')+"</p></a></div>";
 }
 }
+}
