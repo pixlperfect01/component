@@ -73,5 +73,5 @@ if (!(comps[i].hasAttribute('data-tags'))){
 comps[i].setAttribute('data-tags',' '+comps[i].getAttribute('data-lang')+' component');
 }
 if(comps[i].getAttribute('data-lang')=='html'){
-comps[i].innerHTML="<div name=\"com\"><div class=\"uk-card uk-card-default uk-card-hover\"><div class=\"uk-card-body\"><div class=\"uk-card-badge uk-label\">HTML</div><a href=\""+comps[i].getAttribute('data-link')+"\" class=\"n\"><div class=\"uk-card-media-top\"><img src=\""+comps[i].getAttribute('data-img')"\" alt=\"video\"></div><h3 class=\"uk-card-title\">"+comps[i].getAttribute('data-title')+"</h3><p>"+comps[i].getAttribute('data-desc')+"</p></a></div>";
+comps[i].innerHTML="<div name=\"com\"><div class=\"uk-card uk-card-default uk-card-hover\"><div class=\"uk-card-body\"><div class=\"uk-card-badge uk-label\">HTML</div><a href=\""+comps[i].getAttribute('data-link')+"\" class=\"n\"><div class=\"uk-card-media-top\"><img src=\""+comps[i].getAttribute('data-img')+"\" alt=\"video\"></div><h3 class=\"uk-card-title\">"+comps[i].getAttribute('data-title')+"</h3><p>"+comps[i].getAttribute('data-desc')+"</p></a></div>";
 }
