@@ -51,7 +51,7 @@ function googleTranslateElementInit() {
 function setup(){
 var ul = document.getElementById('myUL');
 var comps = ul.getElementsByTagName('component');
-var tags,lang,title,desc,img,final;
+var tags,lang,title,desc,img,final,tmp;
 for(var i = 0;i<comps.length;i++){
 tags = "";
 if(!(comps[i].hasAttribute('data-lang'))){
@@ -73,10 +73,11 @@ if (!(comps[i].hasAttribute('data-tags'))){
 comps[i].setAttribute('data-tags',' '+comps[i].getAttribute('data-lang')+' component');
 }
 if(comps[i].getAttribute('data-lang')=='html'){
-comps[i].innerHTML="<div name=\"com\"><div class=\"uk-card uk-card-default uk-card-hover\"><div class=\"uk-card-body\"><div class=\"uk-card-badge uk-label\">HTML</div><a href=\"";
-comps[i].innerHTML+=comps[i].getAttribute('data-link')+"\" class=\"n\"><div class=\"uk-card-media-top\"><img src=\"";
-comps[i].innerHTML+=comps[i].getAttribute('data-img')+"\" alt=\"video\"></div><h3 class=\"uk-card-title\">";
-comps[i].innerHTML+=comps[i].getAttribute('data-title')+"</h3><p>"+comps[i].getAttribute('data-desc')+"</p></a></div>";
+tmp="<div name=\"com\"><div class=\"uk-card uk-card-default uk-card-hover\"><div class=\"uk-card-body\"><div class=\"uk-card-badge uk-label\">HTML</div><a href=\"";
+tmp+=comps[i].getAttribute('data-link')+"\" class=\"n\"><div class=\"uk-card-media-top\"><img src=\"";
+tmp+=comps[i].getAttribute('data-img')+"\" alt=\"video\"></div><h3 class=\"uk-card-title\">";
+tmp+=comps[i].getAttribute('data-title')+"</h3><p>"+comps[i].getAttribute('data-desc')+"</p></a></div>";
+comps[i].innerHTML=tmp;
 }
 }
 }
