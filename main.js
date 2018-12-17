@@ -49,7 +49,7 @@ function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
 function setup(){
-var ul = document.getElemenetById('myUL');
+var ul = document.getElementById('myUL');
 var comps = ul.getElementsByTagName('component');
 var tags,lang,title,desc,img,final;
 for(var i = 0;i<comps.length;i++){
