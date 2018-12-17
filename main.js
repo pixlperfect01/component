@@ -2,7 +2,7 @@ searchFunction();
 function searchFunction() {
 var input,filter,temp,tfilter,tmp2,tfilter2,ii,i,li,ul;
     ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName('component');
+    li = ul.getElementsByTagName('li');
 input = document.getElementById('searching');
 filter = input.value.toUpperCase();
 for (i = 0; i < li.length; i++) {
